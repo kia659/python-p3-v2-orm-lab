@@ -29,7 +29,7 @@ class Review:
         if isinstance(year, int) and year >= 2000:
             self._year = year
         else:
-            return ValueError("year should be integer")
+            raise ValueError("year should be integer")
 
     @property
     def summary(self):
@@ -40,7 +40,7 @@ class Review:
         if isinstance(summary, str) and len(summary) > 0:
             self._summary = summary
         else:
-            return ValueError("summary must be a string")
+            raise ValueError("summary must be a string")
 
     @property
     def employee_id(self):
